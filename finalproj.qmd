@@ -4,7 +4,14 @@ author: "Eva Portillo Molina"
 format: html
 ---
 ```{r}
+
+library(readr)
 library(tidyverse)
+library(here)
+summer_movies <- read_csv(here::here("data","summer_movies.csv"))
+
+```
+
 ```
 
 ## Quarto
