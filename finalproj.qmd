@@ -4,7 +4,7 @@ author: "Eva Portillo Molina"
 format: html
 ---
 ```{r}
-
+library(tidyverse)
 ```
 
 ## Quarto
