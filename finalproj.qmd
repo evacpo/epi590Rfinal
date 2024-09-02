@@ -31,25 +31,57 @@ tbl_summary(
 
 ```
 
+Regression and making figure
 
 ```{r}
+install.packages("tidyverse")
+library(tidyverse)
+library(broom)
+
 tbl_uvregression(
 	summer_movies,
 	y = num_votes,
-	include = c(runtime_minutes, genres,
+	include = c(genres,runtime_minutes, 
 							average_rating),
 	#did install.packages("broom.helpers")
-	method = lm)
+	method = "lm")
 #can also use this:
 
+
+#creating histogram
+hist(summer_movies$average_rating)
+
+
+#attempting to use broom example
 lm <- lm(num_votes ~ runtime_minutes + genres +
 							average_rating, data = summer_movies)
 tidy_lm<- tidy(lm, conf.int = TRUE)
 
-install.packages("tidyverse")
+
 
 ```
 
+
+Creating a function
+```{r}
+
+newsd <- function(x){
+	n <- length(x)
+	mean_val <- sum(x) / n
+	stddev <- sqrt(sum((x-mean_val)^2)/(n-1))
+	return(stddev)
+}
+
+clean_runtime <- summer_movies$runtime_minutes[!is.na(summer_movies$runtime_minutes)]
+clean_runtime
+
+
+sd <- newsd(clean_runtime)
+print(sd) 
+
+
+
+```
 
 
 ## Quarto
