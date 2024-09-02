@@ -11,8 +11,46 @@ library(here)
 summer_movies <- read_csv(here::here("data","summer_movies.csv"))
 
 ```
+```{r}
+library(gtsummary)
+tbl_summary(
+	summer_movies,
+	by= title_type,
+	include = c(title_type, genres, runtime_minutes, average_rating, num_votes),
+	label = list(
+		genres ~ "Genres",
+		average_rating ~ "Average Rating",
+		num_votes ~ "Number of Votes",
+		runtime_minutes ~ "Run Time Minutes"
+	),
+	missing_text = "Missing") |>
+	add_overall(col_label = "**Total**") |>
+	bold_labels() |>
+	modify_header(label = "**Variable**")
+
 
 ```
+
+
+```{r}
+tbl_uvregression(
+	summer_movies,
+	y = num_votes,
+	include = c(runtime_minutes, genres,
+							average_rating),
+	#did install.packages("broom.helpers")
+	method = lm)
+#can also use this:
+
+lm <- lm(num_votes ~ runtime_minutes + genres +
+							average_rating, data = summer_movies)
+tidy_lm<- tidy(lm, conf.int = TRUE)
+
+install.packages("tidyverse")
+
+```
+
+
 
 ## Quarto
 
