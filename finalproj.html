@@ -104,13 +104,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><strong><em>Information about the data</em></strong></p>
-<p>This is a dataset of movies with “summer” in their title originating from the Internet Movie Database. The variables used in this analysis include the</p>
+<p>This is a dataset of movies with “summer” in their title originating from the Internet Movie Database and can be accessed at this link: <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-07-30/readme.md" class="uri">https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-07-30/readme.md</a> .</p>
+<p>All variables in the dataset were loaded, but the only variables used in this analysis include the:</p>
 <ul>
-<li><p>title_type character variable which refers to the type/format of the title (movie, video, or tvMovie)</p></li>
-<li><p>runtime_minutes refers to the primary runtime of the title, in minutes</p></li>
-<li><p>genres character variable includes up to three genres associated with the title</p></li>
-<li><p>average_rating includes weighted average of all the individual user ratings on IMDb</p></li>
-<li><p>num_votes refers to number of votes the title has received on IMDb (titles with fewer than 10 votes were not included in this dataset)</p></li>
+<li><p>title_type variable which refers to the type/format of the title (movie, video, or tvMovie)</p></li>
+<li><p>runtime_minutes variable refers to the primary runtime of the title, in minutes</p></li>
+<li><p>genres variable includes up to three genres associated with the title</p></li>
+<li><p>average_rating variable includes weighted average of all the individual user ratings on IMDb</p></li>
+<li><p>num_votes variable refers to number of votes the title has received on IMDb (titles with fewer than 10 votes were not included in this dataset)</p></li>
 </ul>
 <section id="creating-a-summary-table" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-summary-table">Creating a summary table</h2>
@@ -137,23 +138,23 @@ Table&nbsp;1: This is my first table
 </figcaption>
 <div aria-describedby="tbl-one-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="aobbjgsmya" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#aobbjgsmya table {
+<div id="yiurlkrjez" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yiurlkrjez table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#aobbjgsmya thead, #aobbjgsmya tbody, #aobbjgsmya tfoot, #aobbjgsmya tr, #aobbjgsmya td, #aobbjgsmya th {
+#yiurlkrjez thead, #yiurlkrjez tbody, #yiurlkrjez tfoot, #yiurlkrjez tr, #yiurlkrjez td, #yiurlkrjez th {
   border-style: none;
 }
 
-#aobbjgsmya p {
+#yiurlkrjez p {
   margin: 0;
   padding: 0;
 }
 
-#aobbjgsmya .gt_table {
+#yiurlkrjez .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -179,12 +180,12 @@ Table&nbsp;1: This is my first table
   border-left-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_caption {
+#yiurlkrjez .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#aobbjgsmya .gt_title {
+#yiurlkrjez .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -196,7 +197,7 @@ Table&nbsp;1: This is my first table
   border-bottom-width: 0;
 }
 
-#aobbjgsmya .gt_subtitle {
+#yiurlkrjez .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -208,7 +209,7 @@ Table&nbsp;1: This is my first table
   border-top-width: 0;
 }
 
-#aobbjgsmya .gt_heading {
+#yiurlkrjez .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -220,13 +221,13 @@ Table&nbsp;1: This is my first table
   border-right-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_bottom_border {
+#yiurlkrjez .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_col_headings {
+#yiurlkrjez .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -241,7 +242,7 @@ Table&nbsp;1: This is my first table
   border-right-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_col_heading {
+#yiurlkrjez .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -261,7 +262,7 @@ Table&nbsp;1: This is my first table
   overflow-x: hidden;
 }
 
-#aobbjgsmya .gt_column_spanner_outer {
+#yiurlkrjez .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -273,15 +274,15 @@ Table&nbsp;1: This is my first table
   padding-right: 4px;
 }
 
-#aobbjgsmya .gt_column_spanner_outer:first-child {
+#yiurlkrjez .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#aobbjgsmya .gt_column_spanner_outer:last-child {
+#yiurlkrjez .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#aobbjgsmya .gt_column_spanner {
+#yiurlkrjez .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -293,11 +294,11 @@ Table&nbsp;1: This is my first table
   width: 100%;
 }
 
-#aobbjgsmya .gt_spanner_row {
+#yiurlkrjez .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#aobbjgsmya .gt_group_heading {
+#yiurlkrjez .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -323,7 +324,7 @@ Table&nbsp;1: This is my first table
   text-align: left;
 }
 
-#aobbjgsmya .gt_empty_group_heading {
+#yiurlkrjez .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -338,15 +339,15 @@ Table&nbsp;1: This is my first table
   vertical-align: middle;
 }
 
-#aobbjgsmya .gt_from_md > :first-child {
+#yiurlkrjez .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#aobbjgsmya .gt_from_md > :last-child {
+#yiurlkrjez .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#aobbjgsmya .gt_row {
+#yiurlkrjez .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -365,7 +366,7 @@ Table&nbsp;1: This is my first table
   overflow-x: hidden;
 }
 
-#aobbjgsmya .gt_stub {
+#yiurlkrjez .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -378,7 +379,7 @@ Table&nbsp;1: This is my first table
   padding-right: 5px;
 }
 
-#aobbjgsmya .gt_stub_row_group {
+#yiurlkrjez .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -392,15 +393,15 @@ Table&nbsp;1: This is my first table
   vertical-align: top;
 }
 
-#aobbjgsmya .gt_row_group_first td {
+#yiurlkrjez .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#aobbjgsmya .gt_row_group_first th {
+#yiurlkrjez .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#aobbjgsmya .gt_summary_row {
+#yiurlkrjez .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -410,16 +411,16 @@ Table&nbsp;1: This is my first table
   padding-right: 5px;
 }
 
-#aobbjgsmya .gt_first_summary_row {
+#yiurlkrjez .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_first_summary_row.thick {
+#yiurlkrjez .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#aobbjgsmya .gt_last_summary_row {
+#yiurlkrjez .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -429,7 +430,7 @@ Table&nbsp;1: This is my first table
   border-bottom-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_grand_summary_row {
+#yiurlkrjez .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -439,7 +440,7 @@ Table&nbsp;1: This is my first table
   padding-right: 5px;
 }
 
-#aobbjgsmya .gt_first_grand_summary_row {
+#yiurlkrjez .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -449,7 +450,7 @@ Table&nbsp;1: This is my first table
   border-top-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_last_grand_summary_row_top {
+#yiurlkrjez .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -459,11 +460,11 @@ Table&nbsp;1: This is my first table
   border-bottom-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_striped {
+#yiurlkrjez .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#aobbjgsmya .gt_table_body {
+#yiurlkrjez .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -472,7 +473,7 @@ Table&nbsp;1: This is my first table
   border-bottom-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_footnotes {
+#yiurlkrjez .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -486,7 +487,7 @@ Table&nbsp;1: This is my first table
   border-right-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_footnote {
+#yiurlkrjez .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -495,7 +496,7 @@ Table&nbsp;1: This is my first table
   padding-right: 5px;
 }
 
-#aobbjgsmya .gt_sourcenotes {
+#yiurlkrjez .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -509,7 +510,7 @@ Table&nbsp;1: This is my first table
   border-right-color: #D3D3D3;
 }
 
-#aobbjgsmya .gt_sourcenote {
+#yiurlkrjez .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -517,72 +518,72 @@ Table&nbsp;1: This is my first table
   padding-right: 5px;
 }
 
-#aobbjgsmya .gt_left {
+#yiurlkrjez .gt_left {
   text-align: left;
 }
 
-#aobbjgsmya .gt_center {
+#yiurlkrjez .gt_center {
   text-align: center;
 }
 
-#aobbjgsmya .gt_right {
+#yiurlkrjez .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#aobbjgsmya .gt_font_normal {
+#yiurlkrjez .gt_font_normal {
   font-weight: normal;
 }
 
-#aobbjgsmya .gt_font_bold {
+#yiurlkrjez .gt_font_bold {
   font-weight: bold;
 }
 
-#aobbjgsmya .gt_font_italic {
+#yiurlkrjez .gt_font_italic {
   font-style: italic;
 }
 
-#aobbjgsmya .gt_super {
+#yiurlkrjez .gt_super {
   font-size: 65%;
 }
 
-#aobbjgsmya .gt_footnote_marks {
+#yiurlkrjez .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#aobbjgsmya .gt_asterisk {
+#yiurlkrjez .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#aobbjgsmya .gt_indent_1 {
+#yiurlkrjez .gt_indent_1 {
   text-indent: 5px;
 }
 
-#aobbjgsmya .gt_indent_2 {
+#yiurlkrjez .gt_indent_2 {
   text-indent: 10px;
 }
 
-#aobbjgsmya .gt_indent_3 {
+#yiurlkrjez .gt_indent_3 {
   text-indent: 15px;
 }
 
-#aobbjgsmya .gt_indent_4 {
+#yiurlkrjez .gt_indent_4 {
   text-indent: 20px;
 }
 
-#aobbjgsmya .gt_indent_5 {
+#yiurlkrjez .gt_indent_5 {
   text-indent: 25px;
 }
 
-#aobbjgsmya .katex-display {
+#yiurlkrjez .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#aobbjgsmya div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#yiurlkrjez div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1817,14 +1818,23 @@ N = 58</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_uvregression</span>(</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    summer_movies,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> num_votes,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">include =</span> <span class="fu">c</span>(genres,runtime_minutes, </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                            average_rating),</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#did install.packages("broom.helpers")</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom.helpers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'broom.helpers'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following objects are masked from 'package:gtsummary':
+
+    all_categorical, all_continuous, all_contrasts, all_dichotomous,
+    all_interaction, all_intercepts</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_uvregression</span>(</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    summer_movies,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> num_votes,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">include =</span> <span class="fu">c</span>(genres,runtime_minutes, </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                            average_rating),</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="tbl-two" class="cell quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1832,23 +1842,23 @@ Table&nbsp;2: Regression table on Number of Votes
 </figcaption>
 <div aria-describedby="tbl-two-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div id="frfbnuugdw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#frfbnuugdw table {
+<div id="mfyhjtgihx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mfyhjtgihx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#frfbnuugdw thead, #frfbnuugdw tbody, #frfbnuugdw tfoot, #frfbnuugdw tr, #frfbnuugdw td, #frfbnuugdw th {
+#mfyhjtgihx thead, #mfyhjtgihx tbody, #mfyhjtgihx tfoot, #mfyhjtgihx tr, #mfyhjtgihx td, #mfyhjtgihx th {
   border-style: none;
 }
 
-#frfbnuugdw p {
+#mfyhjtgihx p {
   margin: 0;
   padding: 0;
 }
 
-#frfbnuugdw .gt_table {
+#mfyhjtgihx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1874,12 +1884,12 @@ Table&nbsp;2: Regression table on Number of Votes
   border-left-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_caption {
+#mfyhjtgihx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#frfbnuugdw .gt_title {
+#mfyhjtgihx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1891,7 +1901,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-bottom-width: 0;
 }
 
-#frfbnuugdw .gt_subtitle {
+#mfyhjtgihx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1903,7 +1913,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-top-width: 0;
 }
 
-#frfbnuugdw .gt_heading {
+#mfyhjtgihx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1915,13 +1925,13 @@ Table&nbsp;2: Regression table on Number of Votes
   border-right-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_bottom_border {
+#mfyhjtgihx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_col_headings {
+#mfyhjtgihx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1936,7 +1946,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-right-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_col_heading {
+#mfyhjtgihx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1956,7 +1966,7 @@ Table&nbsp;2: Regression table on Number of Votes
   overflow-x: hidden;
 }
 
-#frfbnuugdw .gt_column_spanner_outer {
+#mfyhjtgihx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1968,15 +1978,15 @@ Table&nbsp;2: Regression table on Number of Votes
   padding-right: 4px;
 }
 
-#frfbnuugdw .gt_column_spanner_outer:first-child {
+#mfyhjtgihx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#frfbnuugdw .gt_column_spanner_outer:last-child {
+#mfyhjtgihx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#frfbnuugdw .gt_column_spanner {
+#mfyhjtgihx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1988,11 +1998,11 @@ Table&nbsp;2: Regression table on Number of Votes
   width: 100%;
 }
 
-#frfbnuugdw .gt_spanner_row {
+#mfyhjtgihx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#frfbnuugdw .gt_group_heading {
+#mfyhjtgihx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2018,7 +2028,7 @@ Table&nbsp;2: Regression table on Number of Votes
   text-align: left;
 }
 
-#frfbnuugdw .gt_empty_group_heading {
+#mfyhjtgihx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2033,15 +2043,15 @@ Table&nbsp;2: Regression table on Number of Votes
   vertical-align: middle;
 }
 
-#frfbnuugdw .gt_from_md > :first-child {
+#mfyhjtgihx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#frfbnuugdw .gt_from_md > :last-child {
+#mfyhjtgihx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#frfbnuugdw .gt_row {
+#mfyhjtgihx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2060,7 +2070,7 @@ Table&nbsp;2: Regression table on Number of Votes
   overflow-x: hidden;
 }
 
-#frfbnuugdw .gt_stub {
+#mfyhjtgihx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2073,7 +2083,7 @@ Table&nbsp;2: Regression table on Number of Votes
   padding-right: 5px;
 }
 
-#frfbnuugdw .gt_stub_row_group {
+#mfyhjtgihx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2087,15 +2097,15 @@ Table&nbsp;2: Regression table on Number of Votes
   vertical-align: top;
 }
 
-#frfbnuugdw .gt_row_group_first td {
+#mfyhjtgihx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#frfbnuugdw .gt_row_group_first th {
+#mfyhjtgihx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#frfbnuugdw .gt_summary_row {
+#mfyhjtgihx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2105,16 +2115,16 @@ Table&nbsp;2: Regression table on Number of Votes
   padding-right: 5px;
 }
 
-#frfbnuugdw .gt_first_summary_row {
+#mfyhjtgihx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_first_summary_row.thick {
+#mfyhjtgihx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#frfbnuugdw .gt_last_summary_row {
+#mfyhjtgihx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2124,7 +2134,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-bottom-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_grand_summary_row {
+#mfyhjtgihx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2134,7 +2144,7 @@ Table&nbsp;2: Regression table on Number of Votes
   padding-right: 5px;
 }
 
-#frfbnuugdw .gt_first_grand_summary_row {
+#mfyhjtgihx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2144,7 +2154,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-top-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_last_grand_summary_row_top {
+#mfyhjtgihx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2154,11 +2164,11 @@ Table&nbsp;2: Regression table on Number of Votes
   border-bottom-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_striped {
+#mfyhjtgihx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#frfbnuugdw .gt_table_body {
+#mfyhjtgihx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2167,7 +2177,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-bottom-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_footnotes {
+#mfyhjtgihx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2181,7 +2191,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-right-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_footnote {
+#mfyhjtgihx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2190,7 +2200,7 @@ Table&nbsp;2: Regression table on Number of Votes
   padding-right: 5px;
 }
 
-#frfbnuugdw .gt_sourcenotes {
+#mfyhjtgihx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2204,7 +2214,7 @@ Table&nbsp;2: Regression table on Number of Votes
   border-right-color: #D3D3D3;
 }
 
-#frfbnuugdw .gt_sourcenote {
+#mfyhjtgihx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2212,72 +2222,72 @@ Table&nbsp;2: Regression table on Number of Votes
   padding-right: 5px;
 }
 
-#frfbnuugdw .gt_left {
+#mfyhjtgihx .gt_left {
   text-align: left;
 }
 
-#frfbnuugdw .gt_center {
+#mfyhjtgihx .gt_center {
   text-align: center;
 }
 
-#frfbnuugdw .gt_right {
+#mfyhjtgihx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#frfbnuugdw .gt_font_normal {
+#mfyhjtgihx .gt_font_normal {
   font-weight: normal;
 }
 
-#frfbnuugdw .gt_font_bold {
+#mfyhjtgihx .gt_font_bold {
   font-weight: bold;
 }
 
-#frfbnuugdw .gt_font_italic {
+#mfyhjtgihx .gt_font_italic {
   font-style: italic;
 }
 
-#frfbnuugdw .gt_super {
+#mfyhjtgihx .gt_super {
   font-size: 65%;
 }
 
-#frfbnuugdw .gt_footnote_marks {
+#mfyhjtgihx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#frfbnuugdw .gt_asterisk {
+#mfyhjtgihx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#frfbnuugdw .gt_indent_1 {
+#mfyhjtgihx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#frfbnuugdw .gt_indent_2 {
+#mfyhjtgihx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#frfbnuugdw .gt_indent_3 {
+#mfyhjtgihx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#frfbnuugdw .gt_indent_4 {
+#mfyhjtgihx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#frfbnuugdw .gt_indent_5 {
+#mfyhjtgihx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#frfbnuugdw .katex-display {
+#mfyhjtgihx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#frfbnuugdw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mfyhjtgihx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3631,28 +3641,28 @@ Table&nbsp;2: Regression table on Number of Votes
 <section id="creating-a-histogram" class="level2">
 <h2 class="anchored" data-anchor-id="creating-a-histogram">Creating a histogram</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a histogram </span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(summer_movies<span class="sc">$</span>average_rating,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Distribution of Average Ratings"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Average Rating"</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"documents"</span>, <span class="st">"average_rating_histogram.png"</span>))</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(summer_movies<span class="sc">$</span>average_rating,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Distribution of Average Ratings"</span>,</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Average Rating"</span>,</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a histogram </span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(summer_movies<span class="sc">$</span>average_rating,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Distribution of Average Ratings"</span>,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Average Rating"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">png</span>(<span class="at">filename =</span> here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"documents"</span>, <span class="st">"average_rating_histogram.png"</span>))</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(summer_movies<span class="sc">$</span>average_rating,</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Distribution of Average Ratings"</span>,</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Average Rating"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="fu">dev.off</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>quartz_off_screen 
                 2 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#attempting to use broom example</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(num_votes <span class="sc">~</span> runtime_minutes <span class="sc">+</span> genres <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                            average_rating, <span class="at">data =</span> summer_movies)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>tidy_lm<span class="ot">&lt;-</span> <span class="fu">tidy</span>(lm, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#attempting to use broom example</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(num_votes <span class="sc">~</span> runtime_minutes <span class="sc">+</span> genres <span class="sc">+</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                            average_rating, <span class="at">data =</span> summer_movies)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>tidy_lm<span class="ot">&lt;-</span> <span class="fu">tidy</span>(lm, <span class="at">conf.int =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -3669,16 +3679,16 @@ Figure&nbsp;1: This is my first figure
 <p><a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a> is a histogram on the average rating for movies</p>
 <p>Creating a new std. dev function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>newsd <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    mean_val <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> n</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    stddev <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>((x<span class="sc">-</span>mean_val)<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="dv">-1</span>))</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(stddev)</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>sd <span class="ot">&lt;-</span> <span class="fu">newsd</span>(clean_runtime)</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sd) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>newsd <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    mean_val <span class="ot">&lt;-</span> <span class="fu">sum</span>(x) <span class="sc">/</span> n</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    stddev <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="fu">sum</span>((x<span class="sc">-</span>mean_val)<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="dv">-1</span>))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(stddev)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>sd <span class="ot">&lt;-</span> <span class="fu">newsd</span>(clean_runtime)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sd) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 23.85445</code></pre>
 </div>
