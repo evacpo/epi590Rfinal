@@ -1,19 +1,35 @@
 ---
 title: "Final"
 author: "Eva Portillo Molina"
-format: html
+format: 
+  html:
+    theme: sketchy
+
 ---
-```{r}
+
+***Information about the data***
+
+This is a dataset of movies with "summer" in their title originating from the Internet Movie Database.
+
+
+```{r, include=FALSE}
+#Loading in the data
+#| echo: false
 
 library(readr)
 library(tidyverse)
 library(here)
+library(gtsummary)
+
 summer_movies <- read_csv(here::here("data","summer_movies.csv"))
 
 ```
+## Creating a summary table 
 ```{r}
-library(gtsummary)
-tbl_summary(
+#| label: tbl-one
+#| tbl-cap: "This is my first table"
+
+tble1 <- tbl_summary(
 	summer_movies,
 	by= title_type,
 	include = c(title_type, genres, runtime_minutes, average_rating, num_votes),
@@ -27,14 +43,28 @@ tbl_summary(
 	add_overall(col_label = "**Total**") |>
 	bold_labels() |>
 	modify_header(label = "**Variable**")
-
+tble1
 
 ```
 
-Regression and making figure
+@tbl-one shows the descriptive statistics
 
+The median (IQR) number of votes for Comedy movies with a "Movie" type/format title is `r inline_text(tble1, variable = "genres", level = "Comedy", column = "video")`
+
+## Finding the average run time for movies
 ```{r}
-install.packages("tidyverse")
+Avg_Runtime <- mean(summer_movies$runtime_minutes, na.rm = TRUE)
+
+```
+
+The average run time for movies is `r Avg_Runtime`
+
+The average run time for movies is `r mean(summer_movies$runtime_minutes, na.rm = TRUE)`
+
+## Running a Regression
+```{r }
+#| label: tbl-two
+#| tbl-cap: Regression table on Number of Votes
 library(tidyverse)
 library(broom)
 
@@ -45,12 +75,32 @@ tbl_uvregression(
 							average_rating),
 	#did install.packages("broom.helpers")
 	method = "lm")
-#can also use this:
+
+```
+
+@tbl-two is a table regressing the number of votes separately on genres, the movie's run time and the average rating for each movie
 
 
-#creating histogram
-hist(summer_movies$average_rating)
+## Creating a histogram
+```{r}
+#| label: "fig-1"
+#| fig-cap: "This is my first figure"
 
+
+# Creating a histogram 
+hist(summer_movies$average_rating,
+     main = "Distribution of Average Ratings",
+     xlab = "Average Rating",
+     ylab = "Frequency")
+
+png(filename = here::here("documents", "average_rating_histogram.png"))
+
+hist(summer_movies$average_rating,
+     main = "Distribution of Average Ratings",
+     xlab = "Average Rating",
+     ylab = "Frequency")
+
+dev.off()
 
 #attempting to use broom example
 lm <- lm(num_votes ~ runtime_minutes + genres +
@@ -58,12 +108,21 @@ lm <- lm(num_votes ~ runtime_minutes + genres +
 tidy_lm<- tidy(lm, conf.int = TRUE)
 
 
+```
 
+@fig-1 is a histogram on the average rating for movies
+
+```{r, include=FALSE}
+#Creating vector of runtime for using function
+
+clean_runtime <- summer_movies$runtime_minutes[!is.na(summer_movies$runtime_minutes)]
+clean_runtime
 ```
 
 
-Creating a function
-```{r}
+Creating a new std. dev function
+```{r} 
+
 
 newsd <- function(x){
 	n <- length(x)
@@ -71,9 +130,6 @@ newsd <- function(x){
 	stddev <- sqrt(sum((x-mean_val)^2)/(n-1))
 	return(stddev)
 }
-
-clean_runtime <- summer_movies$runtime_minutes[!is.na(summer_movies$runtime_minutes)]
-clean_runtime
 
 
 sd <- newsd(clean_runtime)
@@ -83,24 +139,3 @@ print(sd)
 
 ```
 
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this 
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
