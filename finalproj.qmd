@@ -81,13 +81,14 @@ The average run time for movies is `r mean(summer_movies$runtime_minutes, na.rm 
 #| tbl-cap: Regression table on Number of Votes
 library(tidyverse)
 library(broom)
+install.packages("broom.helpers")
+library(broom.helpers)
 
 tbl_uvregression(
 	summer_movies,
 	y = num_votes,
 	include = c(genres,runtime_minutes, 
 							average_rating),
-	#did install.packages("broom.helpers")
 	method = "lm")
 
 ```
