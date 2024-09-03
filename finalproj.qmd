@@ -4,13 +4,23 @@ author: "Eva Portillo Molina"
 format: 
   html:
     theme: sketchy
-
 ---
 
 ***Information about the data***
 
-This is a dataset of movies with "summer" in their title originating from the Internet Movie Database.
+This is a dataset of movies with "summer" in their title originating from the Internet Movie Database and can be accessed at this link: <https://github.com/rfordatascience/tidytuesday/blob/master/data/2024/2024-07-30/readme.md> .
 
+All variables in the dataset were loaded, but the only variables used in this analysis include the:
+
+-   title_type variable which refers to the type/format of the title (movie, video, or tvMovie)
+
+-   runtime_minutes variable refers to the primary runtime of the title, in minutes
+
+-   genres variable includes up to three genres associated with the title
+
+-   average_rating variable includes weighted average of all the individual user ratings on IMDb
+
+-   num_votes variable refers to number of votes the title has received on IMDb (titles with fewer than 10 votes were not included in this dataset)
 
 ```{r, include=FALSE}
 #Loading in the data
@@ -24,7 +34,9 @@ library(gtsummary)
 summer_movies <- read_csv(here::here("data","summer_movies.csv"))
 
 ```
-## Creating a summary table 
+
+## Creating a summary table
+
 ```{r}
 #| label: tbl-one
 #| tbl-cap: "This is my first table"
@@ -52,6 +64,7 @@ tble1
 The median (IQR) number of votes for Comedy movies with a "Movie" type/format title is `r inline_text(tble1, variable = "genres", level = "Comedy", column = "video")`
 
 ## Finding the average run time for movies
+
 ```{r}
 Avg_Runtime <- mean(summer_movies$runtime_minutes, na.rm = TRUE)
 
@@ -62,6 +75,7 @@ The average run time for movies is `r Avg_Runtime`
 The average run time for movies is `r mean(summer_movies$runtime_minutes, na.rm = TRUE)`
 
 ## Running a Regression
+
 ```{r }
 #| label: tbl-two
 #| tbl-cap: Regression table on Number of Votes
@@ -80,8 +94,8 @@ tbl_uvregression(
 
 @tbl-two is a table regressing the number of votes separately on genres, the movie's run time and the average rating for each movie
 
-
 ## Creating a histogram
+
 ```{r}
 #| label: "fig-1"
 #| fig-cap: "This is my first figure"
@@ -119,9 +133,9 @@ clean_runtime <- summer_movies$runtime_minutes[!is.na(summer_movies$runtime_minu
 clean_runtime
 ```
 
-
 Creating a new std. dev function
-```{r} 
+
+```{r}
 
 
 newsd <- function(x){
@@ -138,4 +152,3 @@ print(sd)
 
 
 ```
-
