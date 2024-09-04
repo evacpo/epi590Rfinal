@@ -30,6 +30,8 @@ library(readr)
 library(tidyverse)
 library(here)
 library(gtsummary)
+library(broom)
+library(broom.helpers)
 
 summer_movies <- read_csv(here::here("data","summer_movies.csv"))
 
@@ -79,9 +81,7 @@ The average run time for movies is `r mean(summer_movies$runtime_minutes, na.rm 
 ```{r }
 #| label: tbl-two
 #| tbl-cap: Regression table on Number of Votes
-library(tidyverse)
-library(broom)
-library(broom.helpers)
+
 
 tbl_uvregression(
 	summer_movies,
